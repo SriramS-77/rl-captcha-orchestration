@@ -1,0 +1,31 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# third-party datasets: download them yourself (data/external/README.md)
+data/external/raw/
+data/external/*.json.gz
+
+# created by `drift_study.py --setup` from models/ and the external data
+experiments/results/scorer/
+experiments/results/ext_scores.pkl
+
+# smoke runs and per-task logs
+experiments/results_smoke/
+experiments/results/**/logs/
+
+# experiment outputs: logs, checkpoints, CSVs and other result files are not tracked
+experiments/results/
+*.log
+*.pt
+*.csv
+*.pkl
+*.keras
+*.json
+
+!experiments/partition.json
+
+# our dataset is tracked, whatever its file type
+!data/recordings/
+!data/recordings/**

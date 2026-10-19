@@ -134,7 +134,6 @@ otherwise writes can fail at the 260-character `MAX_PATH` limit.
 rlcaptcha/            (repo root) core: data chunking, metrics, rewards, DQN/bandit/static policies, simulation loop
 experiments/
   expkit/             library used by every experiment
-    partition.py        session-level split and rotation (fold 2 = the paper's)
     humanity_scorer.py  LSTM scorer: windows of [dx, dy, dt, v, a] + mask, temperature scaling
     crossfit.py         5-part cross-fitted scorers + the refit; loads them and checks provenance
     calibration.py      ECE, Brier, temperature scaling
@@ -143,6 +142,7 @@ experiments/
     trainer.py, ppo.py, bandits_x.py   DQN, PPO, Neural-LinUCB and Neural Thompson Sampling
     posterior_reward.py, proxy.py      the score-only and posterior online rewards
     external.py         Balabit / web-bot cleaning rules, cache build and checksum
+  partition.py        session-level split and rotation (fold 2 = the paper's)
   exp_round3_fold2.py, exp_policy_arch_search.py, preflight.py
                       fold-2 context (scorers, pools, eval-block logging), training entry
                       points and run-time gates
